@@ -1,7 +1,7 @@
 {
   "name": "chimney",
   "description": "chimney consumes logs to keep you warm.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Michael Sokol <mikaa123@gmail.com>",
   "repository": {
     "type": "git",
