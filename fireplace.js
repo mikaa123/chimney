@@ -60,6 +60,5 @@ var burnLogs = function burnLogs(logs, renderer) {
 };
 
 module.exports = {
-	// setRenderer: setRenderer,
 	burnLogs:		 burnLogs
 }
