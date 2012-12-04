@@ -2,7 +2,7 @@ var fireWidth,
 	fireHeight,
 	fireIntensity,
 	iterationCb,
-	interval,
+	iterationInterval,
 	ascii,
 	fireSize,
 	b,
@@ -10,14 +10,15 @@ var fireWidth,
 
 var init = function init(options) {
 
-	fireWidth			= options.width || 60,
-	fireHeight		= options.height || 70,
-	fireIntensity = options.maxIntensity,
-	iterationCb		= options.iterationCb || null,
-	interval			= options.interval,
-	ascii					= options.ascii || [' ', '.', ':', '*', 's', ',', 'S', '#', '$'],
-	fireSize			= fireWidth * fireHeight,
-	b							= [];
+	fireWidth					= options.width || 60,
+	fireHeight				= options.height || 70,
+	fireIntensity 		= options.maxIntensity,
+	iterationCb				= options.iterationCb || null,
+	iterationInterval	= options.iterationInterval,
+	consumeInterval	= options.consumeInterval,
+	ascii							= options.ascii || [' ', '.', ':', '*', 's', ',', 'S', '#', '$'],
+	fireSize					= fireWidth * fireHeight,
+	b									= [];
 
 	for (i = 0; i < fireSize + fireWidth + 1; i++) {
 		b[i] = 0;
@@ -51,11 +52,17 @@ var fireIteration = function fireIteration() {
 	}
 
 	iterationCb(fireString);
-	setTimeout(fireIteration, interval);
+	setTimeout(fireIteration, iterationInterval);
 }
 
-var startFire = function startFire(consumeLogCb, interval) {
-	setInterval(consumeLogCb, interval);
+// var startFire = function startFire(consumeLogCb, interval) {
+// 	setInterval(consumeLogCb, interval);
+// 	fireIteration();
+// }
+
+var startFire = function startFire(options) {
+	setInterval(options.consume, consumeInterval);
+	iterationCb = options.renderer;
 	fireIteration();
 }
 

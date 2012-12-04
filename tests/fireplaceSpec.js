@@ -1,4 +1,5 @@
-var fireplace = require('../fireplace');
+var fireplace = require('../fireplace'),
+	fire = require('../fire');
 
 describe('The fireplace', function(){
 	it('is available', function() {
@@ -13,14 +14,20 @@ describe('The fireplace', function(){
 
 		expect(fireplace.burnLogs).toBeDefined();
 
-		fireplace.setRenderer(renderer);
-		fireplace.burnLogs();
+		// fireplace.setRenderer(renderer);
+		fireplace.burnLogs(4, renderer);
 
 		// The renderer has to be called with a string
 		expect(renderer).toHaveBeenCalledWith(any(String));
 	});
 
-	it('lets us decide how to render it', function() {
-		expect(fireplace.setRenderer).toBeDefined();
-	});
+	// it('lets us decide how to render it', function() {
+	// 	expect(fireplace.setRenderer).toBeDefined();
+
+	// 	spyOn(fire, 'setIterationCb');
+		
+	// 	fireplace.setRenderer(function() {});
+
+	// 	expect(fire.setIterationCb).toHaveBeenCalled();
+	// });
 });
