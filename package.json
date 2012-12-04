@@ -1,11 +1,11 @@
 {
-  "name": "Chimney",
-  "description": "Chimney consumes logs to keep you warm.",
+  "name": "chimney",
+  "description": "chimney consumes logs to keep you warm.",
   "version": "0.1.0",
   "author": "Michael Sokol <mikaa123@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "" 
+    "url": "https://github.com/mikaa123/chimney" 
   },
   "keywords": ["chimney", "Fireplace"],
 	"dependencies": {
