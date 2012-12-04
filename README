@@ -1,0 +1,31 @@
+~~ chimney ~~					Keeps you warm.
+-------------------------------------
+
+			cold? Freezing? KEEP
+					~YOURSELF WARM~
+						with a
+				s0othing CHIMNEY
+									that
+										‘consumes
+												your
+													logs'.
+
+												-- WHAT -
+	ANSI escape sequence animation of
+	an ASCII fire which intensity is
+	modulated by the amount of
+	(console) logs you feed into it.
+
+												-- HOW --
+	You could set up your chimney with
+	npm by doing:
+
+	$ npm install -g chimney
+
+	And then just go to your project,
+	and type:
+
+	$ chimney path/to/your/files
+
+-------------------------------------
+Michael Sokol.
