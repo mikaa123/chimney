@@ -13,30 +13,11 @@ fire.init({
 	maxIntensity: MAXIMUM_INTENSITY,
 	iterationInterval: 100,
 	consumeInterval: 1000,
-	ascii: [
-		' ',
-		ansiHelper.bgColor(FIRE_COLORS[0], '.'),
-		ansiHelper.bgColor(FIRE_COLORS[1], ':'),
-		ansiHelper.bgColor(FIRE_COLORS[2], '*'),
-		ansiHelper.bgColor(FIRE_COLORS[3], 's'),
-		ansiHelper.bgColor(FIRE_COLORS[4], 'S'),
-		ansiHelper.bgColor(FIRE_COLORS[5], '#'),
-		ansiHelper.bgColor(FIRE_COLORS[6], '$')
-	]
+	ascii: [' ', '.', ':', '*', 's', 'S', '#', '$'].map(function(char, index) {
+		if (!index) return char;
+		return ansiHelper.bgColor(FIRE_COLORS[index-1], char);
+	})
 });
-
-// Sets the rendering callback.
-//
-// The rendering callback is called each `iterationInterval`,
-// as set in the fire object.
-//
-// r - The rendering callback. Called with the ANSI escaped
-//		 String representing the current fire animation.
-//
-// Returns nothing.
-// var setRenderer = function setRenderer(r) {
-// 	fire.setIterationCb(r);
-// };
 
 var consumeLog = function consumeLog() {
 	if (remainingLogs > 0) {
