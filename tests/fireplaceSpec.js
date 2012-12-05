@@ -1,5 +1,5 @@
 var fireplace = require('../fireplace'),
-  fire = require('../fire');
+    fire = require('../fire');
 
 describe('The fireplace', function(){
   it('is available', function() {
