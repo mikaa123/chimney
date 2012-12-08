@@ -1,7 +1,7 @@
 {
   "name": "chimney",
   "description": "chimney consumes logs to keep you warm.",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "author": "Michael Sokol <mikaa123@gmail.com>",
   "repository": {
     "type": "git",
@@ -9,9 +9,9 @@
   },
   "keywords": ["chimney", "Fireplace"],
   "dependencies": {
-    "esprima": "*",
-    "escodegen": "*",
-    "walkdir": "*"
+    "esprima": "1.0.2",
+    "escodegen": "0.0.15",
+    "walkdir": "0.0.5"
   },
   "devDependencies": {
     "jasmine-node": "1.0.26"
