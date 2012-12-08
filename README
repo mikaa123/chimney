@@ -2,6 +2,7 @@
 
     ~~ chimney ~~         Keeps you warm.
     -------------------------------------
+
     
            cold? Freezing? KEEP
              ~YOURSELF WARM~
@@ -11,12 +12,16 @@
                         ‘consumes
                             your
                               logs'.
+
+
     
                             -- WHAT -
       ANSI escape sequence animation of
       an ASCII fire which intensity is
       modulated by the amount of
       (console) logs you feed into it.
+
+
       
                             -- HOW --
       You could set up your chimney with
@@ -28,6 +33,8 @@
       and type:
       
       $ chimney path/to/your/files
+
+
     
                             -- WAIT --
       Add a chimney to your build process
@@ -43,6 +50,7 @@
         });
       );
 
+    
     -------------------------------------
     Michael Sokol.
 
