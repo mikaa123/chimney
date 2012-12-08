@@ -10,7 +10,8 @@
   "keywords": ["chimney", "Fireplace"],
   "dependencies": {
     "esprima": "*",
-    "escodegen": "*"
+    "escodegen": "*",
+    "walkdir": "*"
   },
   "devDependencies": {
     "jasmine-node": "1.0.26"

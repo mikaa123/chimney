@@ -1,4 +1,4 @@
-var ansiHelper = require('../ansiHelper');
+var ansiHelper = require('../lib/chimney/ansiHelper');
 
 describe('Ansi Helper module', function(){
   it('is available', function() {
