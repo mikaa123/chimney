@@ -29,6 +29,20 @@
       
       $ chimney path/to/your/files
     
+                            -- WAIT --
+      Add a chimney to your build process
+      to burn the logs before you minify.
+
+      chimney = require('chimney');
+
+      chimney.removeLogsForEachFiles(
+        function('.', function(code) {
+
+          // code is stripped from any
+          // logs.
+        });
+      );
+
     -------------------------------------
     Michael Sokol.
 
