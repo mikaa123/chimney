@@ -43,10 +43,12 @@
       chimney = require('chimney');
 
       chimney.removeLogsForEachFiles(
-        function('.', function(code) {
+        function('.', function(code, f) {
 
           // code is stripped from any
           // logs.
+
+          // f is the path of the file.
         });
       );
 
